@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-nosotros{
+    
+    @include m.contenedor;
+
+    @include m.tablet{
+       @include m.grid(2, 4rem);
+        
+        
+    }
+}
+
+.contenido-sobre-nosotros{
+
+    h2{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-weight: 600;
+        font-size: 3rem;
+        color: v.$verde;
+       
+        @include m.tablet{
+            margin-top: 1rem;
+        }
+        span{
+            border-bottom: 0.5rem solid v.$verde;
+            padding-bottom :1rem;
+            
+        }
+    }
+
+p{
+    margin-top: 3rem;
+}
+
+}
+
+.imagen-sobre-nosotros{
+
+    
+
+}

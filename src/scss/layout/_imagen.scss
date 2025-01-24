@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.imagen {
+    
+    position: relative;
+    min-height: 20rem;
+    max-height: 80rem;
+    overflow: hidden;
+   
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            270deg,
+            rgba(v.$color3, 60%),
+            rgba(darken(v.$color3, 90), 10%)
+            );
+        
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        
+    }
+
+    img {
+        height:60rem;
+        width: 100%;
+        object-fit: fill;
+    
+        @include m.tablet{
+            height: auto;
+        }
+      
+    }
+}
+
+.contenido-imagen{
+    z-index: 10;
+    @include m.contenedor;
+    h2{
+        color: v.$blanco;
+        font-weight: 300;
+        margin: 0;
+        
+    }
+    p{
+        color: v.$blanco;
+        background-color: v.$color3;
+        display: inline-block;
+        padding: .5rem 1rem;
+    }
+}

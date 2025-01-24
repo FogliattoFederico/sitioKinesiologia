@@ -1,0 +1,6 @@
+npm init
+npm i sass
+npm i --save -dev sass (para colocar sass en dependencias de desarrollo)
+npm i gulp (instala gulp como dependencia de produccion)
+crear el archivo gulpfile.js
+npm i --save-dev  gulp-sass (utilizar sass con gulp dev dependencia)
