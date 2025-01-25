@@ -1,34 +1,53 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+.header {
+    width: 100%;
+    background-color: v.$verde;
+
+    @include m.tablet {
+        &.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: 0.1rem 0.2rem 0.3rem #333;
+            z-index: 1;
+            height: auto;
+        }
+    }
 }
 
-header {
+.contenido-header {
+    @include m.contenedor;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #ececec;
 }
 
 .logo {
-    max-width: 5rem;
+    max-width: 6rem;
+    height: auto;
 }
 
 .nav-list {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
 }
 
-.nav-list li a {
-    text-decoration: none;
-    color: #1c1c1c;
+.nav-list {
+    a {
+        text-decoration: none;
+        color: v.$blanco;
+        font-size: 2.3rem;
+        font-weight: 500;
+
+        &:hover {
+            color: v.$amarillo;
+        }
+    }
 }
 
 .abrir-menu,
@@ -48,42 +67,49 @@ header {
 
     .abrir-menu {
         color: #1c1c1c;
+        left: 15px;
     }
 
     .cerrar-menu {
         color: #ececec;
+        right: 15px;
     }
 
-    .nav {//barra lateral
-        
+    .nav {
         opacity: 0;
         visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: 0;
-        bottom: 0;
+        right: -100%; /* Inicialmente oculto fuera de la pantalla */
+        width: 300px;
+        height: 100%;
         background-color: v.$verde;
         padding: 2rem;
-        height: 95rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow-y: auto;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease; /* Transición para posición y opacidad */
+        z-index: 1000;
     }
 
     .nav.visible {
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
+        opacity: 1; /* Hacer visible el menú */
+        visibility: visible; /* Transición gradual para visibilidad */
+        right: 0; /* Deslizar el menú hacia la pantalla */
     }
-    
+
     .nav-list {
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
+        gap: 2rem; /* Espaciado entre elementos */
     }
 
     .nav-list li a {
-        color: #ecececec;
+        color: #ececec;
+        font-size: 2rem;
+        text-align: right;
     }
 }

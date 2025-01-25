@@ -48,7 +48,7 @@ function resaltarEnlace() {
   });
 }
 function scrollNav() {
-  const navLinks = document.querySelectorAll(".navegacion-principal a");
+  const navLinks = document.querySelectorAll(".nav-list a");
 
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -142,7 +142,6 @@ function mostrarTarjetas() {
     });
   });
 }
-
 function sandwich() {
   const nav = document.querySelector("#nav");
   const abrir = document.querySelector("#abrir");
@@ -158,11 +157,13 @@ function sandwich() {
   abrir.addEventListener("click", () => {
       nav.classList.add("visible");
       body.classList.add("overflow-hidden");
+      
   });
 
   cerrar.addEventListener("click", () => {
       nav.classList.remove("visible");
       body.classList.remove("overflow-hidden");
+      
   });
 
   // Cierra el menú al hacer clic en una opción
@@ -170,6 +171,7 @@ function sandwich() {
       option.addEventListener("click", () => {
           nav.classList.remove("visible");
           body.classList.remove("overflow-hidden");
+          
       });
   });
 }
