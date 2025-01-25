@@ -28,7 +28,12 @@ function navegacionFija() {
 function resaltarEnlace() {
   document.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navegacion-principal a");
+    const navLinks = document.querySelectorAll(".nav-list a");
+
+    navLinks.forEach((link) => {
+      console.log(link);
+    });
+    
 
     let actual = "";
     sections.forEach((section) => {

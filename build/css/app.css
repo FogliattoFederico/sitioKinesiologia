@@ -390,7 +390,7 @@ body > section {
   flex-direction: row;
 }
 .imagen img {
-  height: 60rem;
+  height: 55rem;
   width: 100%;
   object-fit: fill;
 }
@@ -774,14 +774,13 @@ footer p {
   display: flex;
   gap: 5rem;
 }
-
 .nav-list a {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 2.3rem;
   font-weight: 500;
 }
-.nav-list a:hover {
+.nav-list a:hover, .nav-list a.active {
   color: #fdda00;
 }
 
