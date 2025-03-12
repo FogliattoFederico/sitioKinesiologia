@@ -4,24 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollNav();
   carousel();
   mostrarTarjetas();
-  sandwich()
+  sandwich();
 });
 
 function navegacionFija() {
   const header = document.querySelector(".header");
   const imagen = document.querySelector(".imagen");
- 
 
   window.addEventListener("scroll", function () {
     if (imagen.getBoundingClientRect().bottom < 1) {
       header.classList.add("fixed");
-      
     } else {
       header.classList.remove("fixed");
-      
-
-
-      
     }
   });
 }
@@ -29,11 +23,6 @@ function resaltarEnlace() {
   document.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-list a");
-
-    navLinks.forEach((link) => {
-      console.log(link);
-    });
-    
 
     let actual = "";
     sections.forEach((section) => {
@@ -100,7 +89,7 @@ function mostrarTarjetas() {
   servicios.forEach((servicio) => {
     servicio.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log(e.target.id)
+      console.log(e.target.id);
 
       // Asegurarse de que no haya otro modal abierto
       if (document.querySelector(".modal")) {
@@ -112,7 +101,8 @@ function mostrarTarjetas() {
       modal.classList.add("modal");
 
       // Construir el contenido del modal dinámicamente
-      const servicioHeader = servicio.querySelector(".servicio-header").innerHTML;
+      const servicioHeader =
+        servicio.querySelector(".servicio-header").innerHTML;
       const servicioBody = servicio.querySelector(".servicio-body").innerHTML;
 
       modal.innerHTML = `
@@ -131,7 +121,7 @@ function mostrarTarjetas() {
       const boton = modal.querySelector(".cerrar-modal");
 
       boton.onclick = function () {
-        modal.classList.add('fade-out'); // Agregar clase para la animación de salida
+        modal.classList.add("fade-out"); // Agregar clase para la animación de salida
         setTimeout(() => {
           modal.remove(); // Eliminar el modal después de la animación
           body.classList.remove("overflow-hidden");
@@ -155,28 +145,25 @@ function sandwich() {
   const menuOptions = nav.querySelectorAll("a"); // Selecciona las opciones del menú
 
   if (!nav || !abrir || !cerrar) {
-      console.error("Uno o más elementos no existen en el DOM.");
-      return;
+    console.error("Uno o más elementos no existen en el DOM.");
+    return;
   }
 
   abrir.addEventListener("click", () => {
-      nav.classList.add("visible");
-      body.classList.add("overflow-hidden");
-      
+    nav.classList.add("visible");
+    body.classList.add("overflow-hidden");
   });
 
   cerrar.addEventListener("click", () => {
-      nav.classList.remove("visible");
-      body.classList.remove("overflow-hidden");
-      
+    nav.classList.remove("visible");
+    body.classList.remove("overflow-hidden");
   });
 
   // Cierra el menú al hacer clic en una opción
-  menuOptions.forEach(option => {
-      option.addEventListener("click", () => {
-          nav.classList.remove("visible");
-          body.classList.remove("overflow-hidden");
-          
-      });
+  menuOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      nav.classList.remove("visible");
+      body.classList.remove("overflow-hidden");
+    });
   });
 }

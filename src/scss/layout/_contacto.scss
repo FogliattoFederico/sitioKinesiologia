@@ -29,32 +29,33 @@
 
 .contenido-contacto{
     @include m.contenedor;
+    
     display: flex;
-    align-items: left;
+    align-items: start;
     flex-direction: column;
     gap: 2rem;
+    
     @include m.tablet{
-        align-items: center
+        align-items: center;
     }
     .contacto{
         display: flex;
-        
         gap: 2rem;
+        
         img{
             width: 2rem;
             height: fit-content;
         }
 
-        p{
+        a{
             margin: 0;
             color: v.$negro;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+           
         }
+       
+
     }
-    
-
-   
-
 }
 
 body{

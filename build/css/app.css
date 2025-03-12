@@ -636,7 +636,7 @@ body > section {
   max-width: 120rem;
   margin: 0 auto;
   display: flex;
-  align-items: left;
+  align-items: start;
   flex-direction: column;
   gap: 2rem;
 }
@@ -653,10 +653,10 @@ body > section {
   width: 2rem;
   height: fit-content;
 }
-.contenido-contacto .contacto p {
+.contenido-contacto .contacto a {
   margin: 0;
   color: #000000;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 body {
@@ -811,7 +811,8 @@ footer p {
     visibility: hidden;
     position: fixed;
     top: 0;
-    right: -100%; /* Inicialmente oculto fuera de la pantalla */
+    right: -100%;
+    /* Inicialmente oculto fuera de la pantalla */
     width: 300px;
     height: 100%;
     background-color: #4CB8B3;
@@ -822,18 +823,23 @@ footer p {
     align-items: flex-end;
     overflow-y: auto;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease; /* Transición para posición y opacidad */
+    transition: all 0.3s ease;
+    /* Transición para posición y opacidad */
     z-index: 1000;
   }
   .nav.visible {
-    opacity: 1; /* Hacer visible el menú */
-    visibility: visible; /* Transición gradual para visibilidad */
-    right: 0; /* Deslizar el menú hacia la pantalla */
+    opacity: 1;
+    /* Hacer visible el menú */
+    visibility: visible;
+    /* Transición gradual para visibilidad */
+    right: 0;
+    /* Deslizar el menú hacia la pantalla */
   }
   .nav-list {
     flex-direction: column;
     align-items: flex-end;
-    gap: 2rem; /* Espaciado entre elementos */
+    gap: 2rem;
+    /* Espaciado entre elementos */
   }
   .nav-list li a {
     color: #ececec;
