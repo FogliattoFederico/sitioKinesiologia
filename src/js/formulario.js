@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       
       btnSubmit.disabled = true;
-
+      btnSubmit.classList.add('opacity')
+      
       spinner.classList.add("mostrar");
       spinner.classList.remove("ocultar");
   
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                               spinner.classList.remove("mostrar");
                         
                               resetFormulario();
+                              
                         
                         
                               const alertaExito = document.createElement("P");

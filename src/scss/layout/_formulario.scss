@@ -121,7 +121,6 @@
 
 }
 
-//EL BOTON ENVIAR TIENE QUE MODIFICAR LA PROPIEDAD OPACITY Y EL DISABLE
 
 .alertaError{
     background-color: red;
@@ -146,4 +145,5 @@
     text-align: center;
     color: v.$blanco;
     width: auto;
+    border-radius: 1rem;
 }

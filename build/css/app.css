@@ -390,7 +390,7 @@ body > section {
   flex-direction: row;
 }
 .imagen img {
-  height: 55rem;
+  height: 45rem;
   width: 100%;
   object-fit: fill;
 }
@@ -760,7 +760,7 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .logo {
@@ -988,6 +988,7 @@ footer p {
   text-align: center;
   color: #FFFFFF;
   width: auto;
+  border-radius: 1rem;
 }
 
 .sk-chase {
