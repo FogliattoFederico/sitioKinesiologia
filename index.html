@@ -67,8 +67,8 @@
         </p>
       </div>
     </section>
-
-    <section id="servicios" class="contenedor-servicios">
+    <div id="servicios" style="margin-bottom: 5rem;"></div>
+    <section id="servicios2" class="contenedor-servicios">
       <h3>Nuestros <span>servicios</span></h3>
       <div class="servicios">
         <div class="servicio" id="servicio-neuro">
@@ -156,10 +156,107 @@
         </div>
       </div>
     </section>
+    <div id="contacto"></div>
+    <section class="contenedor-formulario">
+      <h2>Formulario de Contacto</h2>
+      <form id="formulario" class="formulario">
+        <div class="input">
+          <label for="nombre" class="input__label">Nombre:</label>
+          <input
+            id="nombre"
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+            class="input__campo"
+          />
+        </div>
 
-    <section id="contacto" class="contenedor-contacto">
-      <h2>Contacto</h2>
-      <p class="contenedor-contacto-parrafo">Nuestros medios de comunicacion</p>
+        <div class="input">
+          <label for="email" class="input__label">Email:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email Destino, ej: mkt@empresa.com"
+            class="input__campo"
+          />
+        </div>
+
+        <div class="input">
+          <label for="asunto" class="input__label">Asunto:</label>
+          <input
+            id="asunto"
+            type="text"
+            name="asunto"
+            placeholder="Asunto Email"
+            class="input__campo"
+          />
+        </div>
+
+        <div class="input">
+          <label for="mensaje" class="input__label">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            type="text"
+            name="mensaje"
+            placeholder="Mensaje de Email"
+            class="input__campo"
+          ></textarea>
+        </div>
+
+        <div id="botones" class="botones">
+          <button type="submit" class="btn-submit opacity" disabled>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+              />
+            </svg>
+            Enviar
+          </button>
+
+          <button class="btn-reset" type="reset">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+              />
+            </svg>
+            Reset
+          </button>
+        </div>
+      </form>
+
+      <div id="spinner" class="mostrar ocultar">
+        <div class="sk-chase">
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor-contacto">
+      <p class="contenedor-contacto-parrafo">Otros medios de contacto</p>
       <div class="contenido-contacto">
         <div class="contacto">
           <img src="./src/img/logos/whatsapp.png" alt="whatsapp" />
@@ -173,14 +270,6 @@
             >Facebook</a
           >
         </div>
-        <div class="contacto">
-          <img src="./src/img/logos/email.png" alt="foto-email" />
-          <a
-            href="mailto:kinesiologiadomiciliorosario@gmail.com?subject=Consulta&body=Hola, quisiera más información."
-          >
-            Correo electronico
-          </a>
-        </div>
       </div>
     </section>
     <div class="logo-ws">
@@ -188,6 +277,7 @@
         ><img src="src/img/logos/whatsapp.png" alt="logo-whatsapp"
       /></a>
     </div>
+
     <section class="carrusel-contenedor">
       <div class="carousel">
         <div class="carousel-images">
@@ -208,5 +298,16 @@
     </footer>
 
     <script src="./build/js/app.js"></script>
+    <script src="./build/js/formulario.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "-LpMdeFoq4_RBTHiA",
+           });
+        })();
+     </script>
   </body>
 </html>

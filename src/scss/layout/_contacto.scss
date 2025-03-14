@@ -3,27 +3,19 @@
 
 
 .contenedor-contacto{
-    background-color: v.$color3;
-    height: auto;
-    @include m.tablet{
-        height: 40rem;
-    }
-    //max-height: 30rem;
-    padding: 5rem;
+    background-color: v.$color6;
+    padding: 0;
 
-    h2{
-        color: v.$blanco;
-        font-weight: 600;
-        font-size: 4rem;
-        text-align: center;
-        margin-bottom: 2rem
-    }
     .contenedor-contacto-parrafo{
-        font-weight: 300;
-        margin-bottom: 5rem;
+        font-weight: 600;
         text-align: center;
-        font-size: 3rem
-        
+        font-size: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 95%;
+        margin: 5rem auto;
+        margin-bottom: 2rem;
+ 
     }
 }
 
@@ -31,19 +23,24 @@
     @include m.contenedor;
     
     display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 2rem;
-    
+    justify-content: space-between;
+    width: 90%;
+    gap: 3rem;
+    padding-bottom: 8rem;
+
     @include m.tablet{
-        align-items: center;
+        width: 60%;
+    }
+    @include m.deskstop{
+        width: 30%;
     }
     .contacto{
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
+        align-items: center;
         
         img{
-            width: 2rem;
+            width: 3rem;
             height: fit-content;
         }
 
@@ -51,7 +48,7 @@
             margin: 0;
             color: v.$negro;
             font-size: 1.8rem;
-           
+            
         }
        
 

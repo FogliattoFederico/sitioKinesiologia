@@ -23,7 +23,7 @@ export function dev(){
 //funcion para js
 export function js(done){
 
-    src('src/js/app.js')
+    src('src/js/*.js')
         .pipe(dest('build/js')) 
 
     done()
