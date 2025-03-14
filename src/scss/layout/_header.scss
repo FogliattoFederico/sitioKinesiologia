@@ -34,7 +34,12 @@
 .nav-list {
     list-style-type: none;
     display: flex;
-    gap: 5rem;
+    gap: 3rem;
+    
+    @include m.deskstop{
+        gap: 5rem;
+
+    }
 
     a {
         text-decoration: none;

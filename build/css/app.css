@@ -771,7 +771,12 @@ footer p {
 .nav-list {
   list-style-type: none;
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
+}
+@media (min-width: 1200px) {
+  .nav-list {
+    gap: 5rem;
+  }
 }
 .nav-list a {
   text-decoration: none;
