@@ -874,6 +874,7 @@ footer p {
 .contenedor-formulario h2 {
   font-weight: 600;
   text-align: center;
+  font-size: 3.5rem;
 }
 .contenedor-formulario .formulario {
   display: flex;
